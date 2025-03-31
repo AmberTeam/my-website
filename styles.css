@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+#wallet-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.left-panels, .right-panels {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.left-panels div, .right-panels div {
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#center-content {
+    width: 60%;
+    padding: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.page-section {
+    display: none;
+}
+
+#home {
+    display: block;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions",
+    "start": "node server.js",
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "@perawallet/connect": "^1.4.2",
+    "algosdk": "^3.2.0",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "npm-force-resolutions": "^0.0.10",
+    "rollup": "^4.38.0"
+  },
+  "resolutions": {
+    "ws": "8.18.0"
+  },
+  "main": "rollup.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
