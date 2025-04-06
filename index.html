@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='; style-src 'self' 'unsafe-inline'">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pumpkin Saga</title>
+  <title>My Custom Design</title>
   <style>
     /* Reset default styles */
     * {
@@ -12,7 +12,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     /* Body styling */
     body {
       font-family: Arial, sans-serif;
@@ -20,7 +19,6 @@
       color: #333;
       line-height: 1.6;
     }
-
     /* Navigation bar styling */
     nav {
       background-color: #333;
@@ -30,27 +28,22 @@
       justify-content: space-between;
       align-items: center;
     }
-
     nav .logo {
       font-size: 24px;
       font-weight: bold;
     }
-
     nav .nav-links {
       display: flex;
       gap: 20px;
     }
-
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
     }
-
     nav a:hover {
       color: #3498db;
     }
-
     /* Wallet button styling */
     #wallet-button {
       background-color: #007bff;
@@ -61,34 +54,29 @@
       cursor: pointer;
       font-size: 16px;
     }
-
     #wallet-button:hover {
       background-color: #0056b3;
     }
-
     /* Main content layout using CSS Grid */
     .main-container {
       display: grid;
       grid-template-columns: 1fr 2fr 1fr; /* Left, Center, Right */
       gap: 20px;
       padding: 20px;
-      min-height: calc(100vh - 100px); /* Adjust for nav and footer */
+      min-height: calc(100vh - 70px); /* Adjusted for nav and footer height */
     }
-
     /* Left side panels */
     .left-panels {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-
     /* Right side panels */
     .right-panels {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-
     /* Center news panel */
     .news-panel {
       background-color: #fff;
@@ -96,15 +84,14 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
     /* Individual panels */
     .panel {
       background-color: #fff;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: block; /* Ensure panels are visible */
     }
-
     /* Footer styling */
     footer {
       background-color: #333;
@@ -115,7 +102,6 @@
       bottom: 0;
       width: 100%;
     }
-
     /* QR code container (hidden by default) */
     #qr-code-container {
       display: none;
@@ -129,11 +115,9 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       z-index: 1000;
     }
-
     #qr-code-container h3 {
       margin-bottom: 10px;
     }
-
     /* Responsive design for smaller screens */
     @media (max-width: 768px) {
       nav {
@@ -164,9 +148,10 @@
     <div class="logo">My App</div>
     <div class="nav-links">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#missions">Pumpkin Missions</a>
+      <a href="#about">PumpkinSaga</a>
+      <a href="#contact">Tasks</a>
+      <a href="#missions">Missions</a>
+      <a href="#boss">Guild Boss</a>
     </div>
     <button id="wallet-button">Connect Wallet</button>
   </nav>
@@ -179,13 +164,11 @@
       <div class="panel">Panel 2 (Left)</div>
       <div class="panel">Panel 3 (Left)</div>
     </div>
-
     <!-- Center: News panel -->
     <div class="news-panel">
       <h2>Latest News</h2>
       <p>Here is the latest update or news article. This section can be updated with your content.</p>
     </div>
-
     <!-- Right side: 2 panels -->
     <div class="right-panels">
       <div class="panel">Panel 1 (Right)</div>
@@ -204,10 +187,7 @@
     <div id="qr-code"></div>
   </div>
 
-  <!-- Load the bundled script as a module -->
-  <script>
-    window.global = window;
-  </script>
-  <script type="module" src="/dist/script.js"></script>
+  <!-- External script only, no inline attributes -->
+  <script type="module" src="./dist/script.js"></script>
 </body>
 </html>
